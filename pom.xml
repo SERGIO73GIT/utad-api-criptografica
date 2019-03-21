@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.curso</groupId>
+  <artifactId>api-criptografica</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+    <!--  Parent  necesario un padre para convertir el proyecto en spring boot. proyecto springboot, facilidad paraa creaar API REST-->
+<parent>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-parent</artifactId>
+	<version>1.5.9.RELEASE</version>
+</parent>
+
+<properties>
+ <!--  Java Version  -->
+	<java.version>1.8</java.version>
+	
+	<!--  Validation Version -->
+	<javax-validation.version>2.0.1.Final</javax-validation.version>
+		<hibernate-validator.version>6.0.13.Final</hibernate-validator.version>
+	
+</properties>
+
+
+<build>
+ <!--  Plugins  -->
+	<plugins>
+	 <!--  Spring Boot Maven Plugin , configuracion como se debe construir el WAR -->
+	<plugin>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-maven-plugin</artifactId>
+	</plugin>
+	</plugins>
+</build>
+
+
+
+<!--  Dependencies  -->
+<dependencies>
+ <!--  Spring Boot Starter, aplicacion se levante por si misma en un puerto (no hace falta servidor)  -->
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-web</artifactId>
+	</dependency>
+	
+	 <!--  Spring DevTools, dependencia de desarrollo, para tocar en caliente, hotfix sin tener que parar la aplicacion  -->
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-devtools</artifactId>
+	</dependency>
+	
+	 <!--  Tomcat Embed Jasper, permite crear paginas HTML  -->
+	<dependency>
+		<groupId>org.apache.tomcat.embed</groupId>
+		<artifactId>tomcat-embed-jasper</artifactId>
+	</dependency>
+	
+	 <!--  JSTL, permite crear páginas HTML  -->
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>jstl</artifactId>
+	</dependency>
+	
+</dependencies>
+  
+  
+</project>
